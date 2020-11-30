@@ -51,10 +51,6 @@ public class UserService {
     }
 
     public User logIn(String email, String password) {
-        return userRepository.signIn(email, password);
-    }
-
-    public User getUser(String email, String password) {
         return userRepository.getByEmailAndPassword(email, password);
     }
 }

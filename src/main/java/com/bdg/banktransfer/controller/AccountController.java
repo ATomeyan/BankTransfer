@@ -45,7 +45,7 @@ public class AccountController {
         User user = userService.logIn(email, password);
 
         if (user != null) {
-            return ResponseEntity.ok(userService.getUser(email, password));
+            return ResponseEntity.ok(userService.logIn(email, password));
         } else {
             throw new NotFoundException("User by " + email + " not found");
         }
